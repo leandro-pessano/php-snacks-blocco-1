@@ -38,7 +38,12 @@ $matchesLength = count($matches);
 <body>
 
   <?php for ($i=0; $i <$matchesLength ; $i++) { ?>
-    <p> <?php echo $matches[$i]['casa']?> - <?php echo $matches[$i]['ospite'] ?> | <?php echo $matches[$i]['puntiCasa'] ?> - <?php echo $matches[$i]['puntiOpsite'] ?> </p>
+    <p> <?php echo $matches[$i]['casa'];
+    echo ' - ';
+    echo $matches[$i]['ospite'] .' ';
+    echo $matches[$i]['puntiCasa'];
+    echo ' | ';
+    echo $matches[$i]['puntiOpsite'] ?> </p>
   <?php } ?>
 
 </body>
