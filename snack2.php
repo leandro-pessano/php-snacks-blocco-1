@@ -6,8 +6,17 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
 Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”. -->
 
 <?php
+$name = $_GET["name"];
+$mail = $_GET["mail"];
+$age = $_GET["age"];
+$esito = '';
 
-
+if (strlen($name) > 3 && strpos($mail, '.') && strpos($mail, '@') && is_numeric($age)) {
+  $esito = 'Accesso riuscito';
+}
+else {
+  $esito = 'Accesso negato';
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +29,7 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”.
 </head>
 <body>
 
-
+<p> <?php echo $esito ?> </p>
 
 </body>
 </html>
